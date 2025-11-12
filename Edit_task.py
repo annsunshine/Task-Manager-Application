@@ -13,7 +13,6 @@ class EditTaskWindow(Toplevel):
         self.PRIORITY = ["High", "Medium", "Low"]
         self.STATUS = ["Not started", "In progress", "Completed"]
 
-        # Widgets for editing a task
 
         self.edit_ID_entry = Entry(self)
         self.edit_ID_entry.grid(column=1, row=1, columnspan=2)

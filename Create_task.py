@@ -14,8 +14,6 @@ class CreateTaskWindow(Toplevel):
         self.STATUS = ["Not started", "In progress", "Completed"]
 
 
-        # Widgets for creating a task
-
         self.ID_entry = Entry(self, width= 21)
         self.ID_entry.grid(column=1, row=1, columnspan=2)
         self.name_of_the_task_entry = Entry(self, width= 21)
@@ -25,7 +23,7 @@ class CreateTaskWindow(Toplevel):
         self.deadline_entry.delete(0, END)
         self.priority_combobox = Combobox(self, values= self.PRIORITY, state= "readonly")
         self.priority_combobox.grid(column=1, row=4, columnspan=2)
-        self.priority_combobox.set("Select Priority") #set a default value
+        self.priority_combobox.set("Select Priority")
         self.status_combobox = Combobox(self, values= self.STATUS, state= "readonly")
         self.status_combobox.grid(column=1, row=5, columnspan=2)
         self.status_combobox.set("Select Status")
@@ -67,7 +65,7 @@ class CreateTaskWindow(Toplevel):
                 messagebox.showinfo("Success", "Task created successfully!")
             except Exception as e:
                 messagebox.showerror(title="Error", message=f"An unexpected error occurred: {e}")
-        self.destroy()  # Close the window after saving
+        self.destroy()
 
 
 

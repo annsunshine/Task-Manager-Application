@@ -40,16 +40,16 @@ class ToDoApp(Tk):
         check_tasks_button.grid(row=2, column=0, padx=10, pady=35, sticky="nsew")
  
     def open_create_task_window(self):
-        CreateTaskWindow(self)  # Pass the main app instance to the new window
+        CreateTaskWindow(self)
 
     def open_edit_task_window(self):
-        EditTaskWindow(self)  # Pass the main app instance to the new window
+        EditTaskWindow(self)
 
     def open_created_tasks_window(self):
         loaded_tasks = read_tasks_from_file()
         CheckTasksWindow(self, tasks_list= loaded_tasks)
 
-# if __name__ == "__main__":
-app = ToDoApp() #starts the application  
+
+app = ToDoApp()
 app.mainloop()
 
